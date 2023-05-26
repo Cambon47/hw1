@@ -1,0 +1,57 @@
+﻿article {
+    display: flex;
+    height:100vh;
+}
+
+body {
+   
+    
+    margin: 0;
+}
+
+div{
+    background-color: yellow;
+    flex-grow:1;
+    font-size:40%;
+    height:86%;
+    width:100%;
+}
+
+input[type=text]{
+    border-radius:10px;
+    font-size:10px;
+    height:10%;
+    width:100%;
+
+}
+
+p{
+    background-color:royalblue;
+    border:3px solid red;
+    border-radius:5px;
+    margin:10px 5px;
+    padding:3px;
+
+}
+
+section{
+    background-color:lawngreen;
+    position:absolute;
+    right:0;
+    height:100%;
+    width:30%;
+
+}
+
+span {
+    background-color: orangered;
+    color: white;
+    /*display:block;*/
+  
+    flex-basis: 70%;
+    font-family: 'Oswald', Centaur;
+    font-size: 70px;
+    margin: 0;
+    width: 72%;
+}
+
