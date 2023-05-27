@@ -24,20 +24,20 @@ if (isset($_SESSION['username']))
     <form method="post" name="Registrazione" action="Validazione.php">
 
         <label>
-            <span>Username</span><input type='text' name="Username" class='username' <?php if(isset($_POST["username"])){echo "value=".$_POST["username"];} ?> />
+            <span>Username</span><input type='text' name="username" class='username'  />
         </label>
         <label>
-            <span>Password</span><input type='password' name="Password" class='password' <?php if(isset($_post["password"])){echo "value=".$_POST[" password"];} ?>/>
+            <span>Password</span><input type='password' name="password" class='password' />
         </label>
         <label>
-            <span>Conferma password</span><input type='password' name="ConfPassword" class='confirm_password' <?php if(isset($_POST["confirm_password"])){echo "value=".$_POST["confirm_password"];} ?> />
+            <span>Conferma password</span><input type='password' name="confirm_password" class='confirm_password'  />
         </label>
         <label>
-            <span>E-mail</span><input type='text' name="E-mail" class='email' <?php if(isset($_post["email"])){echo "value=".$_POST[" email"];}?> />
+            <span>E-mail</span><input type='text' name="email" class='email'  />
         </label>
 
         <label>
-            <span>Conferma e-mail</span><input type='text' name="Conferma E-mail" class='confirm_email' <?php if(isset($_POST["confirm_email"])){echo "value=".$_POST["confirm_email"];} ?> />
+            <span>Conferma e-mail</span><input type='text' name="confirm_email" class='confirm_email'  />
 
         </label>
 
@@ -46,9 +46,11 @@ if (isset($_SESSION['username']))
                                          
         <input type="submit" value="Invia dati" id="Invio">
     </form>
-   <span class='error'> <?php echo $_SESSION['errore'];
-   
-                        ?>  </span>
+   <span class='error'> 
+    <?php echo $err = $_SESSION['errore'];
+    session_abort();                    
+                        ?>  
+   </span>
 
 </body>
 

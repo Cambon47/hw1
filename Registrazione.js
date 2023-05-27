@@ -113,12 +113,14 @@ function OnSubmit(event) {
     const checkbox = document.querySelector('input[type = checkbox]');
     if (!checkbox.checked) {
         event.preventDefault();
-        checkbox.classList.add('errorj');
+
+        err = document.querySelector('.error');
+        err.textContent = 'Non hai accettato le condizioni di TMAY';
     }
     else {
-        checkbox.classList.remove('errorj');
-        
-    }
+        err = document.querySelector('.error');
+        err.textContent = '';
+    } 
     if (erro > 0) {
         
 
